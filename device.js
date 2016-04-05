@@ -11,7 +11,7 @@ var name = require('./device/name');
 console.log('------------------------------------------');
 console.log(name + ': ' + id);
 console.log('Prod server now running at http://' + ip + ':80');
-console.log('Dev  server now running at http://' + ip + ':8080');
+console.log('Dev  server now running at http://' + ip + ':9100');
 
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
@@ -21,4 +21,4 @@ http.createServer(function (req, res) {
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.end(text(tmpl, [id, ip, name, 'dev']));
-}).listen(8080);
+}).listen(9100);

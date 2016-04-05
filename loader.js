@@ -11,13 +11,16 @@ if (DEVICE) {
         prod: 'https://omen.firebaseapp.com/'
     };
 
+    var host = window.BASE_URL = envs[DEVICE.env];
+
     function load(script) {
-        document.write('<' + 'script src="' + envs[DEVICE.env] + script + '" type="text/javascript"><' + '/script>');
+        document.write('<' + 'script src="' + host + script + '" type="text/javascript"><' + '/script>');
     }
 
     load('jspm_packages/system.js');
     load('config.js');
     load('bundle.js');
+    load('app.js');
 
 })();
 
