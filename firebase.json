@@ -1,0 +1,11 @@
+{
+  "firebase": "omen",
+  "public": ".",
+  "ignore": [
+    "**/node_modules/**",
+    "firebase.json",
+    "device/**",
+    "device.*",
+    "**/.*"
+  ]
+}
